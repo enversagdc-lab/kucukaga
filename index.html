@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Küçükağa Tarım | Yöresel Taze Domates & Sera Ürünleri</title>
+  <meta name="description" content="Küçükağa Tarım: Tarladan ve seradan taze, canlı kırmızı domatesler. Yöresel lezzet, doğal üretim." />
+  
+  <meta property="og:title" content="Küçükağa Tarım | Tarladan Sofraya Canlı Domatesler" />
+  <meta property="og:description" content="Yöresel sera domatesleri – en taze, en kırmızı, en doğal." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kucukagatarim.com/" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <style>.hero {
+  position: relative;          /* Logo'yu konumlandırmak için önemli */
+  min-height: 80vh;            /* Ekranın büyük kısmını kaplasın */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), #f0f0f0; /* Hafif karartma */
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg-logo {
+  position: absolute;
+  inset: 0;                    /* Tüm alanı kaplasın */
+  z-index: 1;                  /* Metnin arkasında kalsın */
+}
+
+.hero-bg-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;         /* Logo bozulmasın, tam sığsın */
+  opacity: 0.25;               /* Yarı şeffaf – metin okunsun */
+  filter: brightness(1.2) contrast(1.1); /* Hafif canlandırabilirsin */
+  pointer-events: none;        /* Tıklanmasın */
+}
+
+.hero-content {
+  position: relative;          /* Metin logo'nun önünde olsun */
+  z-index: 2;                  /* Logo'dan önde */
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.6rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Mobil için küçültme */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.3rem;
+  }
+  .hero-bg-logo img {
+    opacity: 0.35;             /* Mobilde biraz daha belirgin olabilir */
+  }
+}
+    :root {
+      --primary-green: #0a5c2e;
+      --dark-green: #083f20;
+      --accent-red: #c62828;
+      --text-dark: #1a1a1a;
+      --text-light: #4a4a4a;
+      --bg-light: #f9fafb;
+      --white: #ffffff;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-light);
+      line-height: 1.7;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,92,46,0.96);
+      backdrop-filter: blur(12px);
+      padding: 1.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo-text { color: white; font-size: 1.9rem; letter-spacing: -0.5px; }
+    .logo-text small { display: block; font-size: 0.95rem; opacity: 0.9; margin-top: 0.3rem; }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/data.png') center/cover no-repeat fixed;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .hero-content { max-width: 850px; padding: 2rem 0; }
+    .hero h1 { font-size: clamp(4.5rem, 9vw, 8rem); line-height: 1.05; margin-bottom: 1.8rem; }
+    .hero .lead { font-size: 1.55rem; max-width: 680px; opacity: 0.92; margin-bottom: 3rem; }
+
+    .logo-hero {
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      width: 300px;
+      z-index: 5;
+      transform: rotate(-5deg);
+      filter: drop-shadow(0 20px 50px rgba(0,0,0,0.65));
+    }
+    .logo-hero img { width: 100%; height: auto; border-radius: 50%; border: 6px solid rgba(255,255,255,0.3); }
+
+    section { padding: 11rem 0 9rem; }
+    .section-title { text-align: center; font-size: 3.8rem; color: var(--primary-green); margin-bottom: 1.6rem; }
+    .section-subtitle { text-align: center; font-size: 1.35rem; color: var(--text-light); max-width: 750px; margin: 0 auto 5rem; }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3.5rem;
+    }
+    .product-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 45px rgba(0,0,0,0.09);
+      transition: all 0.4s ease;
+    }
+    .product-card:hover { transform: translateY(-14px); box-shadow: 0 28px 70px rgba(10,92,46,0.2); }
+    .product-card img { width: 100%; height: 340px; object-fit: cover; }
+    .card-content { padding: 2.2rem; }
+    .card-content h3 { font-size: 2.3rem; color: var(--dark-green); margin-bottom: 1.2rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; }
+    .tag {
+      background: var(--primary-green);
+      color: white;
+      padding: 0.55rem 1.3rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 14px;
+      transition: transform 0.5s ease;
+    }
+    .gallery-grid img:hover { transform: scale(1.06); }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 70px;
+      height: 70px;
+      bottom: 40px;
+      right: 40px;
+      background: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      z-index: 9999;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover { background: #20b858; transform: scale(1.1); }
+    .whatsapp-float i { line-height: 70px; }
+
+    footer {
+      background: var(--dark-green);
+      color: white;
+      padding: 6rem 0 3rem;
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      .hero h1 { font-size: 5.5rem; }
+      .logo-hero { top: 12%; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 240px; }
+      .whatsapp-float { width: 60px; height: 60px; bottom: 30px; right: 30px; font-size: 35px; }
+      .whatsapp-float i { line-height: 60px; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo.jpeg">
+        KÜÇÜKAĞA TARIM
+        <small>Deneyimin Mirası Tarla Tazeliğin Gücü</small>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      
+       <div class="hero-bg-logo">
+    <img src="logo.jpeg" alt="Küçük Ağa Tarım Logo Arka Plan">
+  </div>
+
+  <div class="hero-content container">
+<h1>Tarlada Sofraya </h1>
+    <p>Yöresel lezzetlerle dolu, parlak kırmızı, sulu domateslerimiz. Geleneksel ve modern sera hasadıyla tazelik garantisi.</p>
+  </div>
+</section>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Tarladan Sofraya Canlı Domates</h1>
+          <p class="lead">Yöresel lezzetlerle dolu, parlak kırmızı, sulu domateslerimiz. Geleneksel ve modern sera hasadıyla tazelik garantisi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="urunler">
+      <div class="container">
+        <h2 class="section-title">Yöresel Domates Çeşitlerimiz</h2>
+        <p class="section-subtitle">Tarladan ve seradan seçilmiş, canlı kırmızı, doğal lezzet dolu ürünler</p>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="ssalkım.png" alt="Canlı Kırmızı Salkım Domates">
+            <div class="card-content">
+              <h3>Salkım Domates</h3>
+              <p>Yöresel sera hasadı, sulu ve parlak kırmızı. Taze koparılmış tazelik, toptan kasalarda güvenilir teslimat.</p>
+              <div class="tags">
+                <span class="tag">Yöresel Lezzet</span>
+                <span class="tag">Canlı Kırmızı</span>
+                <span class="tag">Tarladan Taze</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="verti.png" alt="Yöresel Verty Kokteyl Domates">
+            <div class="card-content">
+              <h3>Verty Kokteyl Domates</h3>
+              <p>Tatlı yöresel cherry çeşitleri, parlak ve diri. Salata ve sofralar için ideal doğal lezzet.</p>
+              <div class="tags">
+                <span class="tag"> Yöresel</span>
+                <span class="tag"> Dalından & Taze</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="galeri">
+      <div class="container">
+        <h2 class="section-title">Hasat Galerisi</h2>
+        <p class="section-subtitle">Tarladan ve seradan gerçek hasat anları – canlı, kırmızı, yöresel Ürünlerimiz</p>
+
+        <div class="gallery-grid">
+          <img src="salkım.png" alt="Sera'da Canlı Kırmızı Domates Hasadı" loading="lazy">
+          <img src="biff.jpeg" alt="Parlak Kırmızı Domates Yakın Çekim" loading="lazy">
+          <img src="sbiber.png" alt="Yöresel Tarla Domates Dalları" loading="lazy">
+          <img src="tsalkım.png" alt="Sulu ve Taze Domates" loading="lazy">
+		<img src="data.png" alt= " Detaylı Resimler " loading="lazy"> 
+		<img src="bif.png" alt= " Detaylı Resimler " loading="lazy"> 	
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Küçükağa Tarım Ürünleri. Tarladan Sofraya Yöresel Lezzet.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button - Tek iletişim yolu -->
+  <a href="https://wa.me/905422525226" class="whatsapp-float" target="_blank" aria-label="WhatsApp ile iletişime geçin">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
