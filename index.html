@@ -10,10 +10,36 @@
   <meta property="og:description" content="Yöresel sera domatesleri – en taze, en kırmızı, en doğal." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kucukagatarim.com/" />
+  <link rel="canonical" href="https://kucukagatarim.com/" />
+  <link rel="icon" href="logo.ico" type="image/x-icon">
+  <link rel="icon" href="logo.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="logo.png" type="image/png" sizes="any">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="logo.png">
+  <meta name="msapplication-TileImage" content="logo.png">
+  <meta name="theme-color" content="#1e8449">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Küçükağa Tarım",
+    "url": "https://kucukagatarim.com/",
+    "logo": "https://kucukagatarim.com/logo.jpeg",
+    "description": "Tarladan sofraya yöresel taze domates ve sera ürünleri",
+    "contact": {
+      "@type": "ContactPoint",
+      "telephone": "+90-542-252-52-26",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>.hero {
   position: relative;          /* Logo'yu konumlandırmak için önemli */
@@ -27,27 +53,7 @@
   overflow: hidden;
 }
 
-.hero-bg-logo {
-  position: absolute;
-  inset: 0;                    /* Tüm alanı kaplasın */
-  z-index: 1;                  /* Metnin arkasında kalsın */
-}
 
-.hero-bg-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;         /* Logo bozulmasın, tam sığsın */
-  opacity: 0.25;               /* Yarı şeffaf – metin okunsun */
-  filter: brightness(1.2) contrast(1.1); /* Hafif canlandırabilirsin */
-  pointer-events: none;        /* Tıklanmasın */
-}
-
-.hero-content {
-  position: relative;          /* Metin logo'nun önünde olsun */
-  z-index: 2;                  /* Logo'dan önde */
-  max-width: 900px;
-  padding: 2rem;
-}
 
 .hero h1 {
   font-size: 4.5rem;
@@ -66,73 +72,270 @@
 /* Mobil için küçültme */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   .hero p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .hero-bg-logo img {
-    opacity: 0.35;             /* Mobilde biraz daha belirgin olabilir */
+    opacity: 0.35;
   }
 }
     :root {
-      --primary-green: #0a5c2e;
-      --dark-green: #083f20;
-      --accent-red: #c62828;
+      --primary-green: #1e8449;
+      --dark-green: #0b4d2b;
+      --accent-red: #d32f2f;
+      --accent-orange: #e67e22;
       --text-dark: #1a1a1a;
-      --text-light: #4a4a4a;
-      --bg-light: #f9fafb;
+      --text-light: #555555;
+      --bg-light: #fafbfc;
+      --bg-secondary: #f5f7fa;
       --white: #ffffff;
+      --border-color: #e0e7ff;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     * { margin:0; padding:0; box-sizing:border-box; }
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text-dark);
-      background: var(--bg-light);
+      background: linear-gradient(135deg, #fafbfc 0%, #f5f7fa 100%);
       line-height: 1.7;
+      padding-top: 80px;
+      font-size: 16px;
     }
     h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+    p { font-size: 1rem; line-height: 1.6; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; width: 100%; }
 
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(10,92,46,0.96);
-      backdrop-filter: blur(12px);
-      padding: 1.4rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .logo-text { color: white; font-size: 1.9rem; letter-spacing: -0.5px; }
-    .logo-text small { display: block; font-size: 0.95rem; opacity: 0.9; margin-top: 0.3rem; }
-
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/data.png') center/cover no-repeat fixed;
-      color: white;
+      background: rgba(30, 132, 73, 0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      height: 80px;
       display: flex;
       align-items: center;
     }
-    .hero-content { max-width: 850px; padding: 2rem 0; }
-    .hero h1 { font-size: clamp(4.5rem, 9vw, 8rem); line-height: 1.05; margin-bottom: 1.8rem; }
-    .hero .lead { font-size: 1.55rem; max-width: 680px; opacity: 0.92; margin-bottom: 3rem; }
+    .header-inner { 
+      display: flex; 
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      position: relative;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+    }
+    .logos-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .logo-text { 
+      color: white; 
+      font-size: 1.9rem; 
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .header-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid rgba(250,251,252,0.6);
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+      background-color: #fafbfc;
+      padding: 3px;
+      margin: 0;
+      overflow: hidden;
+    }
+    .logo-text-content { display: flex; flex-direction: column; }
+    .logo-text small { display: block; font-size: 0.9rem; opacity: 0.92; margin-top: 0.35rem; font-weight: 500; letter-spacing: 0.3px; }
+    .header-tagline { color: white; font-size: 1.8rem; font-weight: 700; letter-spacing: 0.5px; flex: 1; text-align: center; }
+
+    .cavdir-logo { display: none; }
+    .cavdir-text { display: none; }
+
+    .nav-menu {
+      display: flex;
+      gap: 0.8rem;
+      list-style: none;
+      justify-content: flex-end;
+      margin: 0;
+      background: transparent;
+      padding: 0;
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      width: 70%;
+      max-width: 280px;
+      max-height: 80vh;
+      flex-direction: column; 
+      transition: left 0.3s ease;
+      z-index: 999;
+      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+      overflow-y: auto;
+      background: rgba(10, 92, 46, 0.98);
+      backdrop-filter: blur(12px);
+      padding-top: 0.5rem;
+      gap: 0;
+    }
+    .nav-menu.open {
+      left: 0;
+    }
+    .menu-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 998;
+      pointer-events: none;
+    }
+    .menu-backdrop.active {
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .nav-menu a {
+      color: #FFD700;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      display: block;
+      margin: 0;
+      letter-spacing: 0.3px;
+      border-left: none;
+    }
+    .nav-menu a:hover {
+      background: rgba(255, 215, 0, 0.2);
+      border-left: none;
+      padding-left: 1.2rem;
+      color: white;
+    }
+    .menu-toggle {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 38px;
+      height: 38px;
+      background: #1e8449;
+      border: 2px solid #FFD700;
+      border-radius: 5px;
+      color: #FFD700;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .menu-toggle:hover {
+      transform: scale(1.1);
+      background: #0b4d2b;
+    }
+
+    .header-inner > div:last-child {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+
+
+    .cavdir-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      margin-left: auto;
+      margin-right: 2rem;
+      gap: 0.8rem;
+    }
+    .cavdir-logo img {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .cavdir-text {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 40vh;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('assets/data.png') center/cover no-repeat fixed;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-content { max-width: 850px; padding: 2rem; display: flex; align-items: center; gap: 3rem; position: relative; z-index: 2; text-align: center; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 0; font-weight: 800; letter-spacing: -1px; white-space: normal; color: #000; text-shadow: 3px 3px 12px rgba(255,255,255,0.5); display: none; }
+    .hero .lead { display: none; }
 
     .logo-hero {
       position: absolute;
       top: 15%;
       left: 5%;
-      width: 300px;
+      width: 150px;
+      height: 150px;
       z-index: 5;
       transform: rotate(-5deg);
       filter: drop-shadow(0 20px 50px rgba(0,0,0,0.65));
+      border-radius: 50%;
+      overflow: hidden;
     }
-    .logo-hero img { width: 100%; height: auto; border-radius: 50%; border: 6px solid rgba(255,255,255,0.3); }
+    .logo-hero img { width: 100%; height: 100%; border-radius: 50%; border: 6px solid rgba(255,255,255,0.3); overflow: hidden; object-fit: cover; }
 
-    section { padding: 11rem 0 9rem; }
-    .section-title { text-align: center; font-size: 3.8rem; color: var(--primary-green); margin-bottom: 1.6rem; }
-    .section-subtitle { text-align: center; font-size: 1.35rem; color: var(--text-light); max-width: 750px; margin: 0 auto 5rem; }
+    .hero-bg-logo {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .hero-bg-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0.85;
+      filter: brightness(1.15) contrast(1.2) saturate(0.95);
+      pointer-events: none;
+    }
+
+    section { padding: 6rem 0 5rem; }
+    .section-title { text-align: center; font-size: 2.8rem; color: var(--primary-green); margin-bottom: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+    .section-subtitle { text-align: center; font-size: 1.1rem; color: var(--text-light); max-width: 750px; margin: 0 auto 5rem; font-weight: 500; line-height: 1.6; }
 
     .products-grid {
       display: grid;
@@ -145,11 +348,40 @@
       overflow: hidden;
       box-shadow: 0 12px 45px rgba(0,0,0,0.09);
       transition: all 0.4s ease;
+      position: relative;
+    }
+    .product-card::after {
+      content: '';
+      position: absolute;
+      top: 49%;
+      left: 2px;
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.jpeg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: rgba(255,255,255,0.95);
+      opacity: 1;
+      border-radius: 50%;
+      border: 3px solid var(--primary-green);
+      z-index: 10;
+      transform: translateY(-50%);
+      box-shadow: 0 4px 12px rgba(10, 92, 46, 0.3);
+      overflow: hidden;
+    }
+    .product-card-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: hidden;
     }
     .product-card:hover { transform: translateY(-14px); box-shadow: 0 28px 70px rgba(10,92,46,0.2); }
     .product-card img { width: 100%; height: 340px; object-fit: cover; }
     .card-content { padding: 2.2rem; }
-    .card-content h3 { font-size: 2.3rem; color: var(--dark-green); margin-bottom: 1.2rem; }
+    .card-content h3 { font-size: 1.6rem; color: var(--dark-green); margin-bottom: 1.2rem; font-weight: 700; }
+    .card-content p { font-size: 1rem; line-height: 1.6; color: var(--text-light); }
     .tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; }
     .tag {
       background: var(--primary-green);
@@ -170,9 +402,84 @@
       height: 380px;
       object-fit: cover;
       border-radius: 14px;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
+      cursor: pointer;
     }
-    .gallery-grid img:hover { transform: scale(1.06); }
+    .gallery-grid img:hover { transform: scale(1.12); }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: zoomIn 0.3s ease;
+    }
+    .modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      position: relative;
+    }
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      animation: zoomInImage 0.4s ease;
+    }
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    .modal-close:hover {
+      opacity: 0.7;
+    }
+    @keyframes zoomIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes zoomInImage {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+    .quick-link-card {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      border-left: 4px solid var(--primary-green);
+    }
+    .quick-link-card:hover { 
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(10,92,46,0.15);
+    }
+    .quick-link-card h3 { font-size: 1.6rem; color: var(--primary-green); margin-bottom: 0.5rem; }
+    .quick-link-card p { color: var(--text-light); }
 
     /* WhatsApp Floating Button */
     .whatsapp-float {
@@ -194,6 +501,240 @@
     .whatsapp-float:hover { background: #20b858; transform: scale(1.1); }
     .whatsapp-float i { line-height: 70px; }
 
+    .about-section {
+      background: var(--bg-light);
+      padding: 8rem 0;
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-text h3 { font-size: 2.8rem; color: var(--primary-green); margin-bottom: 1.5rem; }
+    .about-text p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--text-light); }
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .highlight-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .highlight-icon {
+      flex-shrink: 0;
+      width: 35px;
+      height: 35px;
+      background: var(--primary-green);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .highlight-item p { margin: 0; font-size: 1rem; color: var(--text-light); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 5rem;
+    }
+    .feature-card {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover { transform: translateY(-8px); }
+    .feature-card h4 { font-size: 1.6rem; color: var(--primary-green); margin-bottom: 1rem; }
+    .feature-card p { color: var(--text-light); line-height: 1.8; }
+
+    .services-section {
+      padding: 6rem 0;
+      background: var(--bg-light);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      border-top: 4px solid var(--primary-green);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(10,92,46,0.15);
+    }
+    .service-card h3 {
+      font-size: 1.4rem;
+      color: var(--primary-green);
+      margin-bottom: 1rem;
+    }
+    .service-card p {
+      color: var(--text-light);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .addresses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .address-card {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid rgba(255,215,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .address-card:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-5px);
+      border-color: rgba(255,215,0,0.5);
+    }
+    .address-card h4 {
+      color: #FFD700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .address-card p {
+      font-size: 0.95rem;
+      margin: 0.3rem 0;
+      line-height: 1.6;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+      padding: 6rem 0;
+      color: white;
+    }
+    .contact-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+    }
+    .contact-item {
+      text-align: center;
+    }
+    .contact-item h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #FFD700;
+    }
+    .contact-item p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      opacity: 0.95;
+    }
+    .contact-item a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .contact-item a:hover {
+      color: white;
+      text-shadow: 0 0 10px rgba(255,215,0,0.5);
+    }
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: #FFD700;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      background: #FFD700;
+      color: var(--primary-green);
+      transform: scale(1.1);
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+      padding: 6rem 0;
+      color: white;
+    }
+    .contact-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+    }
+    .contact-item {
+      text-align: center;
+    }
+    .contact-item h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #FFD700;
+    }
+    .contact-item p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      opacity: 0.95;
+    }
+    .contact-item a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .contact-item a:hover {
+      color: white;
+      text-shadow: 0 0 10px rgba(255,215,0,0.5);
+    }
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      color: #FFD700;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      background: #FFD700;
+      color: var(--primary-green);
+      transform: scale(1.1);
+    }
+
     footer {
       background: var(--dark-green);
       color: white;
@@ -201,99 +742,436 @@
       text-align: center;
     }
 
+    @keyframes slideInFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInFromLeftStaggered {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .section-title {
+      animation: slideInFromLeft 0.8s ease-out backwards;
+    }
+
+    .section-subtitle {
+      animation: slideInFromRight 0.8s ease-out 0.15s backwards;
+    }
+
+    .quick-link-card {
+      animation: slideInFromLeftStaggered 0.7s ease-out backwards;
+    }
+
+    .quick-link-card:nth-child(1) { animation-delay: 0.3s; }
+    .quick-link-card:nth-child(2) { animation-delay: 0.45s; }
+    .quick-link-card:nth-child(3) { animation-delay: 0.6s; }
+
+    .about-content {
+      animation: slideInFromRight 1s ease-out 0.2s backwards !important;
+    }
+
+    .about-content p {
+      animation: slideInFromRight 1s ease-out 0.2s backwards;
+    }
+
+    .about-logo {
+      animation: slideInFromLeft 1s ease-out 0.3s both;
+      flex-shrink: 0;
+      width: 280px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-card-item {
+      animation: slideInFromLeftStaggered 0.8s ease-out backwards;
+    }
+
+    .service-card-item:nth-child(1) { animation-delay: 0.2s; }
+    .service-card-item:nth-child(2) { animation-delay: 0.35s; }
+    .service-card-item:nth-child(3) { animation-delay: 0.5s; }
+
+    @media (max-width: 768px) {
+      html, body { overflow-x: hidden; }
+      .container { padding: 0 1rem; overflow: hidden; }
+      body { padding-top: 70px; font-size: 14px; }
+      h1, h2 { font-size: 1.5rem !important; }
+      p { font-size: 0.9rem; }
+      h3 { letter-spacing: 0; }
+      section { padding: 2rem 0 1.5rem; }
+      .hero { min-height: 25vh; }
+      header {
+        padding: 0.2rem 0.3rem !important;
+        display: flex;
+        align-items: center;
+        height: 70px;
+        gap: 0.3rem;
+      }
+      header .container {
+        padding: 0 !important;
+        margin: 0;
+        width: auto;
+        flex: 1;
+        max-width: 100%;
+      }
+      .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        padding: 0.05rem 0.2rem;
+        min-height: 38px;
+        min-width: 32px;
+        flex-shrink: 0;
+        margin: 0 !important;
+        color: #FFD700;
+        background: transparent;
+        border: none;
+        z-index: 3001;
+        position: static;
+      }
+      .header-inner {
+        gap: 0.3rem;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 0.5rem;
+        flex-wrap: nowrap;
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+      }
+      .header-inner > div:first-child {
+        display: flex;
+        gap: 0.2rem;
+        flex-shrink: 0;
+        align-items: center;
+      }
+      .header-inner > div:last-child {
+        display: none;
+      }
+      .header-logo { width: 28px; height: 28px; border: 1px solid rgba(255,255,255,0.3); }
+      .logos-container { gap: 0.1rem; }
+      h2[style*="KÜÇÜKAĞA"] { font-size: 0.7rem !important; letter-spacing: 0.5px !important; white-space: nowrap !important; margin-left: 6px; }
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        width: 75%;
+        max-width: 300px;
+        max-height: calc(100vh - 70px);
+        background: rgba(10, 92, 46, 0.99);
+        backdrop-filter: none;
+        padding-top: 1rem;
+        gap: 0;
+        flex-direction: column;
+        transition: left 0.3s ease;
+        z-index: 999;
+        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+      }
+      .nav-menu.open {
+        left: 0;
+      }
+      .nav-menu a {
+        padding: 1rem 1.2rem;
+        border-left: 3px solid transparent;
+        font-size: 1rem;
+        transition: all 0.2s;
+      }
+      .nav-menu a:hover {
+        background: rgba(255, 215, 0, 0.1);
+        border-left-color: #FFD700;
+        padding-left: 1.5rem;
+      }
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        animation: slideInFromTop 0.6s ease-out backwards !important;
+        text-align: left;
+      }
+      .section-subtitle { font-size: 0.9rem; margin-bottom: 0.8rem; }\n      div[style*="gap: 3rem"] { gap: 0.5rem !important; }
+      .products-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      div[style*="max-width: 1000px"] { gap: 0.5rem !important; }
+      .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .gallery-grid img { height: 200px; }
+      .quick-links { grid-template-columns: 1fr; gap: 1rem; margin: 2rem 0; }
+      .quick-link-card { padding: 1.2rem; min-height: auto; text-align: left; }
+      .quick-link-card h3 { font-size: 1.2rem; }
+      .about-logo { width: 150px !important; height: 150px !important; }
+      .about-logo img { width: 150px !important; height: 150px !important; object-fit: cover; object-position: center; }
+      .about-content { grid-template-columns: 1fr !important; }
+      [style*="gap: 3rem"] { flex-direction: row !important; justify-content: space-between !important; gap: 1rem !important; margin-top: 2rem !important; }
+      .tag { font-size: 0.75rem; padding: 0.3rem 0.8rem; }
+      .card-content { padding: 1rem; }
+      .card-content h3 { font-size: 1.1rem; }
+      .card-content p { font-size: 0.9rem; }
+      .product-card::after { top: 54.9%; left: -2px; transform: translateY(-50%); }
+      .whatsapp-float { width: 50px; height: 50px; bottom: 15px; right: 15px; font-size: 26px; }
+      .whatsapp-float i { line-height: 50px; }
+      footer { padding: 2rem 0 1.5rem; font-size: 0.85rem; }
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 9998;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 8px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px; right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 9999;
+      transition: color 0.3s ease;
+    }
+    .lightbox-close:hover { color: #FFD700; }
+    .lightbox-nav {
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      font-size: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s;
+      z-index: 9999;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.25); color: #FFD700; }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+
     @media (max-width: 1024px) {
       .hero h1 { font-size: 5.5rem; }
       .logo-hero { top: 12%; left: 50%; transform: translateX(-50%) rotate(-3deg); width: 240px; }
       .whatsapp-float { width: 60px; height: 60px; bottom: 30px; right: 30px; font-size: 35px; }
       .whatsapp-float i { line-height: 60px; }
     }
+
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none !important;
+      }
+      .nav-menu {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        padding-top: 0 !important;
+        width: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        flex-direction: row !important;
+        gap: 0.8rem !important;
+        box-shadow: none !important;
+        overflow-y: visible !important;
+        z-index: 2000 !important;
+        justify-content: flex-end;
+      }
+      .nav-menu.open {
+        left: auto !important;
+      }
+    }
+
+    /* Page Transition Fade Effects */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    body { animation: fadeIn 0.6s ease-in; }
+    body.fade-out { animation: fadeOut 0.4s ease-out forwards; }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <div class="container header-inner">
-      <div class="logo.jpeg">
-        KÜÇÜKAĞA TARIM
-        <small>Deneyimin Mirası Tarla Tazeliğin Gücü</small>
+      <div style="display: flex; align-items: center; gap: 0.8rem;">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <div style="background-image: url('logo.jpeg');" class="header-logo"></div>
+          <div style="background-image: url('cavdir.jpg');" class="header-logo"></div>
+        </div>
+        <h2 style="color: #FFD700; font-size: 1.8rem; margin: 0; letter-spacing: 2px; font-weight: 900; text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 0 0 15px rgba(255,215,0,0.7); white-space: nowrap;">KÜÇÜKAĞA TARIM</h2>
+      </div>
+      <div style="position: relative; display: flex; align-items: center;">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="neden-biz.html">Neden Biz</a></li>
+          <li><a href="hizmetler.html">Hizmetler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
       </div>
     </div>
   </header>
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
 
   <main>
-    <section class="hero">
-      
-       <div class="hero-bg-logo">
-    <img src="logo.jpeg" alt="Küçük Ağa Tarım Logo Arka Plan">
-  </div>
-
-  <div class="hero-content container">
-<h1>Tarlada Sofraya </h1>
-    <p>Yöresel lezzetlerle dolu, parlak kırmızı, sulu domateslerimiz. Geleneksel ve modern sera hasadıyla tazelik garantisi.</p>
-  </div>
-</section>
+    <section style="background: white; padding: 6rem 0;">
       <div class="container">
-        <div class="hero-content">
-          <h1>Tarladan Sofraya Canlı Domates</h1>
-          <p class="lead">Yöresel lezzetlerle dolu, parlak kırmızı, sulu domateslerimiz. Geleneksel ve modern sera hasadıyla tazelik garantisi.</p>
+        <h2 class="section-title animate-slide-left delay-1" style="color: var(--primary-green); margin-bottom: 2rem; text-align: center;">Tarladan Sofraya</h2>
+        <p class="section-subtitle animate-slide-right delay-2" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Küçükağa Tarım olarak, tarımsal üretimin en iyi örneklerini sunmaktayız. Taze, kaliteli ve doğal ürünlerimiz doğrudan tarladansofraya ulaşır.</p>
+        
+        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 3rem;">
+          <div style="display: flex; gap: 3rem; justify-content: center; align-items: center;">
+            <div class="about-logo" style="width: 220px; height: 220px; border-radius: 50%; overflow: hidden; background-color: #fafbfc;">
+              <img src="logo.jpeg" alt="Küçükağa Tarım Logo" data-lightbox="true" onclick="openLightbox(this)" style="width: 100%; height: 100%; border-radius: 50%; border: 3px solid rgba(250,251,252,0.6); box-shadow: 0 4px 15px rgba(0,0,0,0.1); object-fit: cover; overflow: hidden;">
+            </div>
+            <div class="about-logo" style="width: 220px; height: 220px; border-radius: 50%; overflow: hidden; background-color: #fafbfc;">
+              <img src="cavdir.jpg" alt="Çavdir Fresh Logo" data-lightbox="true" onclick="openLightbox(this)" style="width: 100%; height: 100%; border-radius: 50%; border: 3px solid rgba(250,251,252,0.6); box-shadow: 0 4px 15px rgba(0,0,0,0.1); object-fit: cover; overflow: hidden;">
+            </div>
+          </div>
+          <div class="about-content">
+            <h3 style="font-size: 1.8rem; color: var(--dark-green); margin-bottom: 1.5rem; font-weight: 700; text-align: center;">Kaliteli Üretim, Güvenilir Tedarik</h3>
+            <p style="font-size: 1rem; line-height: 1.8; color: var(--text-light); margin-bottom: 1.2rem; text-align: center;">Türkiye'nin en verimli tarım bölgelerinden hasadını yaparak, modern soğuk hava depolama sistemleriyle maksimum tazelik garantisi sağlıyoruz.</p>
+            <p style="font-size: 1rem; line-height: 1.8; color: var(--text-light); margin-bottom: 1.2rem; text-align: center;">Doğrudan çiftçiden alım yaparak, ürün kalitesi ve müşteri memnuniyetini en uygun fiyatlarla sunuyoruz.</p>
+            <div style="text-align: center;">
+              <a href="hakkimizda.html" style="display: inline-block; background: var(--primary-green); color: white; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; margin-top: 1rem;">Detaylı Bilgi</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="urunler">
+    <section style="padding: 8rem 0;">
       <div class="container">
-        <h2 class="section-title">Yöresel Domates Çeşitlerimiz</h2>
-        <p class="section-subtitle">Tarladan ve seradan seçilmiş, canlı kırmızı, doğal lezzet dolu ürünler</p>
-
-        <div class="products-grid">
+        <h2 class="section-title">Ürünlerimiz</h2>
+        <p class="section-subtitle">En taze meyve ve sebzelerimiz hemen ürünler sayfasında</p>
+        
+        <div class="products-grid" style="margin-bottom: 3rem;">
           <div class="product-card">
-            <img src="ssalkım.png" alt="Canlı Kırmızı Salkım Domates">
+            <img src="SALKIM DOMATES.jpeg" alt="Salkım Domates" data-lightbox="true" onclick="openLightbox(this)">
             <div class="card-content">
               <h3>Salkım Domates</h3>
-              <p>Yöresel sera hasadı, sulu ve parlak kırmızı. Taze koparılmış tazelik, toptan kasalarda güvenilir teslimat.</p>
+              <p>Taze salkım domateslerimiz, dalında tam olgunlaşarak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
               <div class="tags">
-                <span class="tag">Yöresel Lezzet</span>
-                <span class="tag">Canlı Kırmızı</span>
-                <span class="tag">Tarladan Taze</span>
+                <span class="tag">Dalından</span>
+                <span class="tag">Taze</span>
               </div>
             </div>
           </div>
-
           <div class="product-card">
-            <img src="verti.png" alt="Yöresel Verty Kokteyl Domates">
+            <img src="VERTY DOMATES.jpeg" alt="Verty Kokteyl Domates" data-lightbox="true" onclick="openLightbox(this)">
             <div class="card-content">
               <h3>Verty Kokteyl Domates</h3>
-              <p>Tatlı yöresel cherry çeşitleri, parlak ve diri. Salata ve sofralar için ideal doğal lezzet.</p>
+              <p>Taze verty cherry domateslerimiz, dalında tam olgunlaşarak hasat edildiği için tatlı tat ve benzersiz aromasını koruyor.</p>
               <div class="tags">
-                <span class="tag"> Yöresel</span>
-                <span class="tag"> Dalından & Taze</span>
+                <span class="tag">Dalından</span>
+                <span class="tag">Taze</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="patlıcan.jpg" alt="Kemer Patlıcan" data-lightbox="true" onclick="openLightbox(this)">
+            <div class="card-content">
+              <h3>Kemer Patlıcan</h3>
+              <p>Taze Kemer patlıcanımız, dalında tam olgunlaşearak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
+              <div class="tags">
+                <span class="tag">Dalından</span>
+                <span class="tag">Taze</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="galeri">
-      <div class="container">
-        <h2 class="section-title">Hasat Galerisi</h2>
-        <p class="section-subtitle">Tarladan ve seradan gerçek hasat anları – canlı, kırmızı, yöresel Ürünlerimiz</p>
-
-        <div class="gallery-grid">
-          <img src="salkım.png" alt="Sera'da Canlı Kırmızı Domates Hasadı" loading="lazy">
-          <img src="biff.jpeg" alt="Parlak Kırmızı Domates Yakın Çekim" loading="lazy">
-          <img src="sbiber.png" alt="Yöresel Tarla Domates Dalları" loading="lazy">
-          <img src="tsalkım.png" alt="Sulu ve Taze Domates" loading="lazy">
-		<img src="data.png" alt= " Detaylı Resimler " loading="lazy"> 
-		<img src="bif.png" alt= " Detaylı Resimler " loading="lazy"> 	
+        <div style="text-align: center;">
+          <a href="urunler.html" style="display: inline-block; background: var(--primary-green); color: white; padding: 1rem 2.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 1.1rem;">Tüm Ürünler & Galeri</a>
         </div>
       </div>
     </section>
+
+    <section style="padding: 8rem 0; background: white;">
+      <div class="container">
+        <h2 class="section-title">Ne Arıyorsunuz?</h2>
+        <p class="section-subtitle">Hızlıca eriş</p>
+        
+        <div class="quick-links">
+          <a href="urunler.html" class="quick-link-card">
+            <h3>🍅 Ürünler & Galeri</h3>
+            <p>Tüm ürünlerimiz ve hasat fotoğrafları</p>
+          </a>
+          <a href="hakkimizda.html" class="quick-link-card">
+            <h3>ℹ️ Hakkımızda</h3>
+            <p>Şirketimiz ve değerlerimiz</p>
+          </a>
+          <a href="iletisim.html" class="quick-link-card">
+            <h3>📞 İletişim</h3>
+            <p>Bize ulaşın</p>
+          </a>
+        </div>
+      </div>
   </main>
 
   <footer>
     <div class="container">
-      <p>© <span id="year"></span> Küçükağa Tarım Ürünleri. Tarladan Sofraya Yöresel Lezzet.</p>
+      <p>© <span id="year"></span> Küçükağa Tarım Ürünleri. Tarladan Sofraya Doğal Lezzet.</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+        <a href="https://www.facebook.com/share/18U8bR2U88/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: white; font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/kucuk_aga_tarim.aydin?igsh=cGRrMXJ0emNpb3h1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: white; font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -304,6 +1182,109 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    
+    function toggleMenu() {
+      const navMenu = document.getElementById("navMenu");
+      const backdrop = document.getElementById("menuBackdrop");
+      navMenu.classList.toggle("open");
+      backdrop.classList.toggle("active");
+    }
+    
+
+    
+    // Close menu when clicking on a link (allow default navigation)
+    const navMenu = document.getElementById("navMenu");
+    if (navMenu) {
+      navMenu.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") {
+          // Close menu but allow link to navigate
+          document.getElementById("navMenu").classList.remove("open");
+          document.getElementById("menuBackdrop").classList.remove("active");
+        }
+      });
+    }
+
+    // Lightbox Functionality
+    let currentLightboxIndex = 0;
+    let lightboxImages = [];
+
+    function openLightbox(img) {
+      return; // Lightbox disabled - use hover zoom instead
+      const modal = document.getElementById("lightboxModal");
+      const lightboxImg = document.getElementById("lightboxImage");
+      
+      lightboxImages = Array.from(document.querySelectorAll("img[data-lightbox='true']"));
+      currentLightboxIndex = lightboxImages.indexOf(img);
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById("lightboxModal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    function changeLightboxImage(n) {
+      currentLightboxIndex += n;
+      
+      if (currentLightboxIndex >= lightboxImages.length) {
+        currentLightboxIndex = 0;
+      } else if (currentLightboxIndex < 0) {
+        currentLightboxIndex = lightboxImages.length - 1;
+      }
+      
+      const lightboxImg = document.getElementById("lightboxImage");
+      lightboxImg.src = lightboxImages[currentLightboxIndex].src;
+      lightboxImg.alt = lightboxImages[currentLightboxIndex].alt;
+    }
+
+    // Keyboard navigation for lightbox
+    document.addEventListener("keydown", (e) => {
+      const modal = document.getElementById("lightboxModal");
+      if (modal && modal.classList.contains("active")) {
+        if (e.key === "ArrowLeft") changeLightboxImage(-1);
+        if (e.key === "ArrowRight") changeLightboxImage(1);
+        if (e.key === "Escape") closeLightbox();
+      }
+    });
+
+    // Click outside modal to close
+    const lightboxModal = document.getElementById("lightboxModal");
+    if (lightboxModal) {
+      lightboxModal.addEventListener("click", function(e) {
+        if (e.target === this) closeLightbox();
+      });
+    }
+  </script>  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+      <img id="lightboxImage" class="lightbox-img" src="" alt="">
+      <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          if (!this.href.includes(window.location.pathname)) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            const href = this.href;
+            setTimeout(function() {
+              window.location.href = href;
+            }, 400);
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>

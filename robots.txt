@@ -1,0 +1,34 @@
+# Robots.txt for Küçükağa Tarım
+User-agent: *
+Allow: /
+Allow: *.html
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.ico
+
+Disallow: /.git/
+
+Sitemap: https://kucukagatarim.com/sitemap.xml
+Sitemap: https://kucukagatarim.com/sitemap-tr.xml
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay
+Crawl-delay: 1
+Request-rate: 1/1s
+
+# Cache settings
+User-agent: *
+# Images are cacheable
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /.png$
