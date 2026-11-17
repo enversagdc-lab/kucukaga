@@ -444,28 +444,6 @@ p { margin: 0 0 1em; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 .no-js .reveal { opacity: 1; transform: none; }
-
-/* ---------- Kurumsal eklemeler ---------- */
-.hero-full { min-height: min(88vh, 760px); display: flex; align-items: center; }
-.hero-full::before { opacity: 1; background: linear-gradient(100deg, rgba(8,30,18,.93) 0%, rgba(8,30,18,.75) 45%, rgba(8,30,18,.25) 100%); background-size: auto; }
-.hero-full .hero-bg { position: absolute; inset: 0; z-index: -2; }
-.hero-full .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
-.hero-full .wrap { display: block; }
-.hero-full .hero-inner { max-width: 660px; }
-
-.cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.cat-card { position: relative; display: block; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3/4; color: var(--white); isolation: isolate; }
-.cat-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .6s; }
-.cat-card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(8,30,18,.88) 100%); }
-.cat-card:hover img { transform: scale(1.05); }
-.cat-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.75rem; display: grid; gap: .3rem; }
-.cat-body strong { font-family: var(--serif); font-size: 1.9rem; line-height: 1.1; }
-.cat-body span { color: #dbe7df; }
-.cat-body em { font-style: normal; font-weight: 600; color: #ffcfc6; display: inline-flex; align-items: center; gap: .4rem; margin-top: .4rem; }
-.cat-body em svg { width: 18px; height: 18px; }
-.cat-card:hover { color: var(--white); }
-@media (max-width: 860px) { .cats { grid-template-columns: 1fr; } .cat-card { aspect-ratio: 16/10; } }
-
 .mosaic { display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: 1fr 1fr; gap: 1rem; height: 560px; }
 .mosaic > span { border-radius: var(--radius-lg); overflow: hidden; cursor: zoom-in; box-shadow: var(--shadow-md); }
 .mosaic img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
@@ -478,3 +456,18 @@ p { margin: 0 0 1em; }
 .section-dark .checks svg { color: #9fd3b0; }
 .branch-card p { font-size: .95rem; }
 .brand-card h3 { margin-top: .25rem; }
+
+/* ---------- Ek cilalar ---------- */
+.hero h1 { letter-spacing: -.02em; }
+.hero-media .m1 { box-shadow: 0 40px 80px -30px rgba(0,0,0,.7); }
+.hero-media::after {
+  content: ""; position: absolute; right: -30px; bottom: -30px; width: 220px; height: 220px; border-radius: 50%; z-index: -1;
+  background: radial-gradient(circle, rgba(210,63,44,.35), transparent 70%);
+}
+.product { box-shadow: var(--shadow-sm); }
+.product-body h3 { font-size: 1.4rem; }
+.section-head h2 { position: relative; }
+.stat strong { letter-spacing: -.02em; }
+.feature .icon { transition: transform .3s; }
+.feature:hover .icon { transform: translateY(-3px) rotate(-4deg); }
+.cavdir-band { background: linear-gradient(135deg, var(--green-950), #1a4a2f); }
