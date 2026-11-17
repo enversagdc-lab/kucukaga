@@ -1,836 +1,230 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" class="no-js">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ürünler | Küçükağa Tarım | Yöresel Taze Domates & Sera Ürünleri</title>
-  <meta name="description" content="Küçükağa Tarım: Tarladan ve seradan taze, canlı kırmızı domatesler. Yöresel lezzet, doğal üretim." />
-  
-  <meta property="og:title" content="Ürünler | Küçükağa Tarım | Tarladan Sofraya Canlı Domatesler" />
-  <meta property="og:description" content="Yöresel sera domatesleri – en taze, en kırmızı, en doğal." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kucukagatarim.com/urunler.html" />
-  <link rel="canonical" href="https://kucukagatarim.com/urunler.html" />
-  <link rel="icon" href="logo.ico" type="image/x-icon">
-  <link rel="icon" href="logo.png" type="image/png" sizes="192x192">
-  <link rel="icon" href="logo.png" type="image/png" sizes="any">
-  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="logo.png">
-  <meta name="msapplication-TileImage" content="logo.png">
-  <meta name="theme-color" content="#1e8449">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Küçükağa Tarım",
-    "url": "https://kucukagatarim.com/",
-    "logo": "https://kucukagatarim.com/logo.jpeg",
-    "description": "Tarladan sofraya yöresel taze domates ve sera ürünleri",
-    "contact": {
-      "@type": "ContactPoint",
-      "telephone": "+90-542-252-52-26",
-      "contactType": "Customer Service"
-    }
-  }
-  </script>
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ürünlerimiz | Salkım, Bif ve Kokteyl Domates, Biber, Patlıcan – Küçükağa Tarım</title>
+  <meta name="description" content="Salkım domates, verty kokteyl domates, bif domates, tane domates, sivri biber ve kemer patlıcan. Dalından taze, toptan tedarik.">
+  <link rel="canonical" href="https://kucukagatarim.com/urunler.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Küçükağa Tarım">
+  <meta property="og:title" content="Ürünlerimiz | Salkım, Bif ve Kokteyl Domates, Biber, Patlıcan – Küçükağa Tarım">
+  <meta property="og:description" content="Salkım domates, verty kokteyl domates, bif domates, tane domates, sivri biber ve kemer patlıcan. Dalından taze, toptan tedarik.">
+  <meta property="og:url" content="https://kucukagatarim.com/urunler.html">
+  <meta property="og:image" content="https://kucukagatarim.com/assets/img/salkim-domates.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#123d26">
+  <link rel="icon" href="logo.ico" sizes="any">
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    :root {
-      --primary-green: #1e8449;
-      --dark-green: #0b4d2b;
-      --accent-red: #d32f2f;
-      --accent-orange: #e67e22;
-      --text-dark: #1a1a1a;
-      --text-light: #555555;
-      --bg-light: #fafbfc;
-      --bg-secondary: #f5f7fa;
-      --white: #ffffff;
-      --border-color: #e0e7ff;
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-      --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background: linear-gradient(135deg, #fafbfc 0%, #f5f7fa 100%);
-      line-height: 1.7;
-      padding-top: 80px;
-      font-size: 16px;
-    }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
-    p { font-size: 1rem; line-height: 1.6; }
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; width: 100%; }
-
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: rgba(30, 132, 73, 0.95);
-      backdrop-filter: blur(20px) saturate(180%);
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-      height: 80px;
-      display: flex;
-      align-items: center;
-    }
-    header .container {
-      padding: 0 2rem 0 0.8rem;
-    }
-    .header-inner { 
-      display: flex; 
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.2rem;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      position: relative;
-    }
-    .header-top {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      width: 100%;
-    }
-    .logos-container {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .logo-text { 
-      color: white; 
-      font-size: 1.9rem; 
-      letter-spacing: -0.5px;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .header-logo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 3px solid rgba(250,251,252,0.6);
-      background-size: cover;
-      background-position: center;
-      flex-shrink: 0;
-      background-color: #fafbfc;
-      padding: 3px;
-      margin: 0;
-      overflow: hidden;
-    }
-    .logo-text-content { display: flex; flex-direction: column; }
-    .logo-text small { display: block; font-size: 0.9rem; opacity: 0.92; margin-top: 0.35rem; font-weight: 500; letter-spacing: 0.3px; }
-
-    .cavdir-logo { display: none; }
-    .cavdir-text { display: none; }
-
-    .nav-menu {
-      display: flex;
-      gap: 0.8rem;
-      list-style: none;
-      justify-content: flex-end;
-      margin: 0;
-      background: transparent;
-      padding: 0;
-      position: static;
-      width: auto;
-      height: auto;
-      flex-direction: row;
-      z-index: 2000;
-      box-shadow: none;
-      overflow-y: visible;
-      transition: none;
-    }
-    .nav-menu.open {
-      left: 0;
-    }
-    .menu-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      z-index: 998;
-      pointer-events: none;
-    }
-    .menu-backdrop.active {
-      background: rgba(0, 0, 0, 0.5);
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-    .nav-menu a {
-      color: #FFD700;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      padding: 0.5rem 1.2rem;
-      border-radius: 6px;
-      display: block;
-      margin: 0;
-      letter-spacing: 0.3px;
-      border-left: none;
-    }
-    .nav-menu a:hover {
-      background: rgba(255, 215, 0, 0.2);
-      border-left: none;
-      padding-left: 1.2rem;
-      color: white;
-    }
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: none;
-      color: #FFD700;
-      font-size: 1.8rem;
-      cursor: pointer;
-      padding: 0.5rem;
-      min-height: 50px;
-      min-width: 50px;
-      z-index: 2001;
-      transition: transform 0.3s ease;
-    }
-    .menu-toggle:hover {
-      transform: scale(1.1);
-    }
-
-    .cavdir-logo {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      margin-left: auto;
-      margin-right: 2rem;
-      gap: 0.8rem;
-    }
-    .cavdir-logo img {
-      height: 75px;
-      width: auto;
-      border-radius: 6px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    .cavdir-text {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    section { padding: 5rem 0 5rem; }
-    .section-title { text-align: center; font-size: 2.8rem; color: var(--primary-green); margin-bottom: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
-    .section-subtitle { text-align: center; font-size: 1.1rem; color: var(--text-light); max-width: 750px; margin: 0 auto 5rem; font-weight: 500; line-height: 1.6; }
-    
-    @keyframes slideInFromTop {
-      from {
-        opacity: 0;
-        transform: translateY(-40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes slideInFromLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    @keyframes slideInFromRight {
-      from {
-        opacity: 0;
-        transform: translateX(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    .section-title {
-      animation: slideInFromTop 0.8s ease-out backwards;
-    }
-    .section-subtitle {
-      animation: slideInFromTop 0.8s ease-out 0.15s backwards;
-    }
-    .animate-slide-left {
-      animation: slideInFromLeft 0.8s ease-out forwards;
-    }
-    .animate-slide-right {
-      animation: slideInFromRight 0.8s ease-out forwards;
-    }
-    .delay-1 { animation-delay: 0.2s; opacity: 0; }
-    .delay-2 { animation-delay: 0.35s; opacity: 0; }
-    .section-subtitle { text-align: center; font-size: 1.1rem; color: var(--text-light); max-width: 750px; margin: 0 auto 5rem; font-weight: 500; line-height: 1.6; }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 3.5rem;
-    }
-    .product-card {
-      background: white;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 12px 45px rgba(0,0,0,0.09);
-      transition: all 0.4s ease;
-      position: relative;
-    }
-    .product-card::after {
-      content: '';
-      position: absolute;
-      top: 49%;
-      left: 2px;
-      width: 60px;
-      height: 60px;
-      background-image: url('logo.jpeg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: rgba(255,255,255,0.95);
-      opacity: 1;
-      border-radius: 50%;
-      border: 3px solid var(--primary-green);
-      z-index: 10;
-      transform: translateY(-50%);
-      box-shadow: 0 4px 12px rgba(10, 92, 46, 0.3);
-    }
-    .product-card.salkim-card::after {
-      content: '';
-      position: absolute;
-      top: 41%;
-      left: -5px;
-      width: 60px;
-      height: 60px;
-      background-image: url('logo.jpeg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: rgba(255,255,255,0.95);
-      opacity: 1;
-      border-radius: 50%;
-      border: 3px solid var(--primary-green);
-      z-index: 10;
-      transform: translateY(-50%);
-      box-shadow: 0 4px 12px rgba(10, 92, 46, 0.3);
-    }
-    .product-card:hover { transform: translateY(-14px); box-shadow: 0 28px 70px rgba(10,92,46,0.2); }
-    .product-card img { width: 100%; height: 340px; object-fit: cover; transition: transform 0.4s ease; }
-    .product-card img:hover { transform: scale(1.08); }
-    .card-content { padding: 2.2rem; }
-    .card-content h3 { font-size: 1.6rem; color: var(--dark-green); margin-bottom: 1.2rem; font-weight: 700; }
-    .card-content p { font-size: 1rem; line-height: 1.6; color: var(--text-light); }
-    .tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; }
-    .tag {
-      background: var(--primary-green);
-      color: white;
-      padding: 0.55rem 1.3rem;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2rem;
-    }
-    .gallery-item {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-    .gallery-grid img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 14px;
-      transition: transform 0.5s ease, box-shadow 0.3s ease;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
-    .gallery-grid img:hover { 
-      transform: scale(1.06);
-      box-shadow: 0 15px 40px rgba(10,92,46,0.2);
-    }
-
-    /* Lightbox Styles */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.95);
-      z-index: 9998;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .lightbox.active { display: flex; }
-    .lightbox-content {
-      position: relative;
-      max-width: 90vw;
-      max-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox-img {
-      max-width: 100%;
-      max-height: 90vh;
-      border-radius: 8px;
-      object-fit: contain;
-      cursor: pointer;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 20px; right: 30px;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 9999;
-      transition: color 0.3s ease;
-    }
-    .lightbox-close:hover { color: #FFD700; }
-    .lightbox-nav {
-      position: absolute; top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.15);
-      color: white;
-      border: none;
-      padding: 15px 20px;
-      font-size: 30px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: all 0.3s;
-      z-index: 9999;
-    }
-    .lightbox-nav:hover { background: rgba(255,255,255,0.25); color: #FFD700; }
-    .lightbox-prev { left: 20px; }
-    .lightbox-next { right: 20px; }
-
-    .whatsapp-float {
-      position: fixed;
-      width: 70px;
-      height: 70px;
-      bottom: 40px;
-      right: 40px;
-      background: #25D366;
-      color: #FFF;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 40px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      z-index: 9999;
-      transition: all 0.3s;
-      text-decoration: none;
-    }
-    .whatsapp-float:hover { background: #20b858; transform: scale(1.1); }
-    .whatsapp-float i { line-height: 70px; }
-
-    footer {
-      background: var(--dark-green);
-      color: white;
-      padding: 6rem 0 3rem;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      html, body { overflow-x: hidden; }
-      .container { padding: 0 1rem; overflow: hidden; }
-      body { padding-top: 70px; font-size: 14px; }
-      section { padding: 2rem 0 1.5rem; }
-      h1, h2 { font-size: 1.5rem !important; }
-      p { font-size: 0.9rem; }
-      header { padding: 0.2rem 0.3rem !important; display: flex; align-items: center; height: 70px; gap: 0.3rem; }
-      header .container { padding: 0 !important; margin: 0; width: auto; flex: 1; max-width: 100%; }
-      .menu-toggle {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        padding: 0.05rem 0.2rem;
-        min-height: 38px;
-        min-width: 32px;
-        flex-shrink: 0;
-        margin: 0 !important;
-        color: #FFD700;
-        background: transparent;
-        border: none;
-        z-index: 3001;
-        position: static;
-      }
-      .header-inner {
-        gap: 0.3rem;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0 0.5rem;
-        flex-wrap: nowrap;
-        width: 100%;
-        display: flex;
-        margin-left: 0;
-      }
-      .header-inner > div:first-child {
-        display: flex;
-        gap: 0.2rem;
-        flex-shrink: 0;
-        align-items: center;
-      }
-      .header-inner > div:last-child {
-        display: none;
-      }
-      .header-logo { width: 28px; height: 28px; border: 1px solid rgba(255,255,255,0.3); }
-      .logos-container { gap: 0.1rem; }
-      h2[style*="KÜÇÜKAĞA"] { font-size: 0.7rem !important; letter-spacing: 0.5px !important; white-space: nowrap !important; margin-left: 6px; }
-      .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        width: 75%;
-        max-width: 300px;
-        max-height: calc(100vh - 70px);
-        background: rgba(10, 92, 46, 0.99);
-        backdrop-filter: none;
-        padding-top: 1rem;
-        gap: 0;
-        flex-direction: column;
-        transition: left 0.3s ease;
-        z-index: 999;
-        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
-        overflow-y: auto;
-      }
-      .nav-menu.open {
-        left: 0;
-      }
-      .nav-menu a {
-        padding: 1rem 1.2rem;
-        border-left: 3px solid transparent;
-        font-size: 1rem;
-        transition: all 0.2s;
-      }
-      .nav-menu a:hover {
-        background: rgba(255, 215, 0, 0.1);
-        border-left-color: #FFD700;
-        padding-left: 1.5rem;
-      }
-      .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 0.5rem;
-        animation: slideInFromTop 0.6s ease-out backwards !important;
-        text-align: left;
-      }
-      .section-subtitle { font-size: 0.9rem; margin-bottom: 0.8rem; }
-      .section-subtitle { 
-        font-size: 0.9rem; 
-        margin-bottom: 2rem;
-        animation: slideInFromTop 0.6s ease-out 0.15s backwards !important;
-      }
-      .products-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .gallery-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-      .gallery-grid img { height: 250px; }
-      .card-content { padding: 1.5rem; }
-      .card-content h3 { font-size: 1.3rem; }
-      .card-content p { font-size: 0.95rem; }
-      .tag { font-size: 0.85rem; }
-      .product-card::after { top: 52.1%; left: -2px; transform: translateY(-50%); }
-      .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; font-size: 28px; }
-      .whatsapp-float i { line-height: 55px; }
-      footer { padding: 3rem 0 2rem; }
-    }
-
-    @media (max-width: 1024px) {
-      .whatsapp-float { width: 60px; height: 60px; bottom: 30px; right: 30px; font-size: 35px; }
-      .whatsapp-float i { line-height: 60px; }
-    }
-
-    /* Page Transition Fade Effects */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeOut {
-      from { opacity: 1; }
-      to { opacity: 0; }
-    }
-    body { animation: fadeIn 0.6s ease-in; }
-    body.fade-out { animation: fadeOut 0.4s ease-out forwards; }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css?v=20261117">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Küçükağa Tarım", "legalName": "Küçükağa Tarım Ürünleri Gıda İnşaat İthalat İhracat Sanayi ve Ticaret Ltd. Şti.", "url": "https://kucukagatarim.com/", "logo": "https://kucukagatarim.com/assets/img/logo.jpg", "email": "info@kucukagatarim.com", "foundingDate": "2001", "sameAs": ["https://www.instagram.com/kucuk_aga_tarim.aydin?igsh=cGRrMXJ0emNpb3h1", "https://www.facebook.com/share/18U8bR2U88/"], "contactPoint": [{"@type": "ContactPoint", "telephone": "+90-542-252-52-26", "contactType": "customer service", "areaServed": "TR", "availableLanguage": "Turkish"}], "address": {"@type": "PostalAddress", "streetAddress": "Acarlar Adnan Menderes Toptancı Hali No: 41-46", "addressLocality": "İncirliova", "addressRegion": "Aydın", "addressCountry": "TR"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Product", "name": "Salkım Domates", "description": "Salkımıyla birlikte, dalında tam olgunlaşarak hasat edilir. Yoğun aroması ve canlı rengiyle hem sofrada hem tezgâhta öne çıkar.", "image": "https://kucukagatarim.com/assets/img/salkim-domates.jpg", "brand": {"@type": "Brand", "name": "Küçükağa Tarım"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "name": "Verty Kokteyl Domates", "description": "Küçük boyu ve tatlı lezzetiyle salata, kahvaltı ve sunumlar için ideal. Dalında olgunlaşır, aromasını korur.", "image": "https://kucukagatarim.com/assets/img/verty-domates.jpg", "brand": {"@type": "Brand", "name": "Küçükağa Tarım"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "name": "Kemer Patlıcan", "description": "İnce, uzun ve parlak kabuklu. Közleme, kızartma ve dolma için tercih edilen yöresel bir lezzet.", "image": "https://kucukagatarim.com/assets/img/kemer-patlican.jpg", "brand": {"@type": "Brand", "name": "Küçükağa Tarım"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Product", "name": "Bif Domates", "description": "İri ve etli yapısıyla dilimlemeye uygun; salata, sandviç ve restoran mutfakları için güçlü bir seçenek.", "image": "https://kucukagatarim.com/assets/img/bif-domates.jpg", "brand": {"@type": "Brand", "name": "Küçükağa Tarım"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "name": "Sivri Biber", "description": "İnce kabuklu, taze ve diri. Kızartma, kahvaltı ve salatalar için günlük hasat.", "image": "https://kucukagatarim.com/assets/img/sivri-biber.jpg", "brand": {"@type": "Brand", "name": "Küçükağa Tarım"}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Product", "name": "Tane Domates", "description": "Sofralık, tane tane seçilmiş domates. Günlük mutfak kullanımı ve toptan siparişler için düzenli tedarik.", "image": "https://kucukagatarim.com/assets/img/tane-domates.jpg", "brand": {"@type": "Brand", "name": "Küçükağa Tarım"}}}]}</script>
 </head>
 <body>
-
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="container header-inner">
-      <div style="display: flex; align-items: center; gap: 0.8rem;">
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-          <div style="background-image: url('logo.jpeg');" class="header-logo"></div>
-          <div style="background-image: url('cavdir.jpg');" class="header-logo"></div>
-        </div>
-        <h2 style="color: #FFD700; font-size: 1.8rem; margin: 0; letter-spacing: 2px; font-weight: 900; text-shadow: 3px 3px 8px rgba(0,0,0,0.8), 0 0 15px rgba(255,215,0,0.7); white-space: nowrap;">KÜÇÜKAĞA TARIM</h2>
-      </div>
-      <div style="position: relative; display: flex; align-items: center;">
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="urunler.html">Ürünler</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
-          <li><a href="hakkimizda.html">Hakkımızda</a></li>
-          <li><a href="neden-biz.html">Neden Biz</a></li>
-          <li><a href="hizmetler.html">Hizmetler</a></li>
-          <li><a href="iletisim.html">İletişim</a></li>
-        </ul>
-      </div>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-items">
+      <a href="tel:+905422525226"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>+90 542 252 52 26</a>
+      <a class="topbar-hide-sm" href="mailto:info@kucukagatarim.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>info@kucukagatarim.com</a>
+      <span class="topbar-hide-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Aydın · Antalya · Burdur</span>
     </div>
-  </header>
-  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
-
-  <main>
-    <section>
-      <div class="container">
-        <h2 class="section-title animate-slide-left delay-1">Ürünlerimiz</h2>
-        <p class="section-subtitle animate-slide-right delay-2">Yöresel taze sebze ve meyvelerimiz: Tarladan ve seradan seçilen, doğal ve lezzetli ürünler. Sebzeler ve meyveler en tazeliğiyle sofranıza ulaşır.</p>
-
-        <div class="products-grid">
-          <div class="product-card">
-            <img src="SALKIM.jpeg" alt="Canlı Kırmızı Salkım Domates" data-lightbox="true" onclick="openLightbox(this)">
-            <div class="card-content">
-              <h3>Salkım Domates</h3>
-              <p>Taze salkım domateslerimiz, dalında tam olgunlaşarak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
-              <div class="tags">
-                <span class="tag">Dalından</span>
-                <span class="tag">Taze</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <img src="VERTY DOMATES.jpeg" alt="Yöresel Verty Kokteyl Domates" data-lightbox="true" onclick="openLightbox(this)">
-            <div class="card-content">
-              <h3>Verty Kokteyl Domates</h3>
-              <p>Taze verty cherry domateslerimiz, dalında tam olgunlaşarak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
-              <div class="tags">
-                <span class="tag">Dalından</span>
-                <span class="tag">Taze</span>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="patlıcan.jpg" alt="Taze Yöresel Patlican" data-lightbox="true" onclick="openLightbox(this)">
-            <div class="card-content">
-              <h3>Kemer Patlıcan</h3>
-              <p>Taze Kemer patlıcanımız, dalında tam olgunlaşarak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
-              <div class="tags">
-                <span class="tag">Dalından</span>
-                <span class="tag">Taze</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <img src="BİF DOMATES.jpeg" alt="Taze Bif Domates" data-lightbox="true" onclick="openLightbox(this)">
-            <div class="card-content">
-              <h3>Bif Domates</h3>
-              <p>Taze Bif domateslerimiz, dalında tam olgunlaşarak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
-              <div class="tags">
-                <span class="tag">Dalından</span>
-                <span class="tag">Taze</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <img src="SİVRİ BİBER.jpeg" alt="Taze Sivri Biber" data-lightbox="true" onclick="openLightbox(this)">
-            <div class="card-content">
-              <h3>Sivri Biber</h3>
-              <p>Taze Sivri biberlerimiz, dalında tam olgunlaşarak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
-              <div class="tags">
-                <span class="tag">Dalından</span>
-                <span class="tag">Taze</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <img src="tane DOMATES.jpeg" alt="Taze Tane Domates" data-lightbox="true" onclick="openLightbox(this)">
-            <div class="card-content">
-              <h3>Tane Domates</h3>
-              <p>Taze Tane domateslerimiz, dalında tam olgunlaşarak hasat edildiği için eşsiz bir aroma ve tat yoğunluğuna sahip.</p>
-              <div class="tags">
-                <span class="tag">Dalından</span>
-                <span class="tag">Taze</span>
-              </div>
-            </div>
-          </div>        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2 class="section-title animate-slide-left delay-1">Hasat Galerisi</h2>
-        <p class="section-subtitle">Hasattan sofraya: tarlalarımız ve seramızdan doğrudan gerçek anlar – canlı, doğal ve yöresel ürünler</p>
-
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="SALKIM DOMATES.jpeg" alt="Salkım Domates Hasadı" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="biff.jpeg" alt="Biff Domates Yakın Çekim" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="patlıcan.jpg" alt="Yöresel Patlican Hasadı" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="SİVRİ BİBER.jpeg" alt="Sivri Biber Ürünleri" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="VERTY DOMATES.jpeg" alt="Verty Kokteyl Domates" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="BİF DOMATES.jpeg" alt="Bif Domates Seçkisi" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="detay.jpeg" alt="Domates Detay Resmi" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="kasasalkım.jpeg" alt="Kasalı Salkım Domates" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="tane DOMATES.jpeg" alt="Tane Domates" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="s1.jpg" alt="Ürün Görseli 1" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="s2.jpg" alt="Ürün Görseli 2" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="s3.jpg" alt="Ürün Görseli 3" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="b1.jpg" alt="Ürün Görseli 4" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-          <div class="gallery-item"><img src="b2.jpg" alt="Ürün Görseli 5" loading="lazy" data-lightbox="true" onclick="openLightbox(this)"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Küçükağa Tarım Ürünleri. Tarladan Sofraya Doğal Lezzet.</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
-        <a href="https://www.facebook.com/share/18U8bR2U88/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: white; font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/kucuk_aga_tarim.aydin?igsh=cGRrMXJ0emNpb3h1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: white; font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/905422525226" class="whatsapp-float" target="_blank" aria-label="WhatsApp ile iletişime geçin">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    
-    function toggleMenu() {
-      const navMenu = document.getElementById("navMenu");
-      const backdrop = document.getElementById("menuBackdrop");
-      navMenu.classList.toggle("open");
-      backdrop.classList.toggle("active");
-    }
-    
-    // Close menu when clicking on a link (allow default navigation)
-    const navMenu = document.getElementById("navMenu");
-    if (navMenu) {
-      navMenu.addEventListener("click", (e) => {
-        if (e.target.tagName === "A") {
-          // Close menu but allow link to navigate
-          document.getElementById("navMenu").classList.remove("open");
-          document.getElementById("menuBackdrop").classList.remove("active");
-        }
-      });
-    }
-
-    // Lightbox Functionality
-    let currentLightboxIndex = 0;
-    let lightboxImages = [];
-
-    function openLightbox(img) {
-      return; // Lightbox disabled - use hover zoom instead
-      const modal = document.getElementById("lightboxModal");
-      const lightboxImg = document.getElementById("lightboxImage");
-      
-      lightboxImages = Array.from(document.querySelectorAll("img[data-lightbox='true']"));
-      currentLightboxIndex = lightboxImages.indexOf(img);
-      
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeLightbox() {
-      const modal = document.getElementById("lightboxModal");
-      modal.classList.remove("active");
-      document.body.style.overflow = "auto";
-    }
-
-    function changeLightboxImage(n) {
-      currentLightboxIndex += n;
-      
-      if (currentLightboxIndex >= lightboxImages.length) {
-        currentLightboxIndex = 0;
-      } else if (currentLightboxIndex < 0) {
-        currentLightboxIndex = lightboxImages.length - 1;
-      }
-      
-      const lightboxImg = document.getElementById("lightboxImage");
-      lightboxImg.src = lightboxImages[currentLightboxIndex].src;
-      lightboxImg.alt = lightboxImages[currentLightboxIndex].alt;
-    }
-
-    // Keyboard navigation for lightbox
-    document.addEventListener("keydown", (e) => {
-      const modal = document.getElementById("lightboxModal");
-      if (modal && modal.classList.contains("active")) {
-        if (e.key === "ArrowLeft") changeLightboxImage(-1);
-        if (e.key === "ArrowRight") changeLightboxImage(1);
-        if (e.key === "Escape") closeLightbox();
-      }
-    });
-
-    // Click outside modal to close
-    const lightboxModal = document.getElementById("lightboxModal");
-    if (lightboxModal) {
-      lightboxModal.addEventListener("click", function(e) {
-        if (e.target === this) closeLightbox();
-      });
-    }
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('.nav-menu a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          if (!this.href.includes(window.location.pathname)) {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            const href = this.href;
-            setTimeout(function() {
-              window.location.href = href;
-            }, 400);
-          }
-        });
-      });
-    });
-  </script>
-
-  <!-- Lightbox Modal -->
-  <div id="lightboxModal" class="lightbox">
-    <div class="lightbox-content">
-      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-      <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</button>
-      <img id="lightboxImage" class="lightbox-img" src="" alt="">
-      <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">&#10095;</button>
+    <div class="topbar-social">
+      <a href="https://www.instagram.com/kucuk_aga_tarim.aydin?igsh=cGRrMXJ0emNpb3h1" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+      <a href="https://www.facebook.com/share/18U8bR2U88/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
     </div>
   </div>
-
+</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Küçükağa Tarım ana sayfa">
+      <img src="assets/img/logo-sm.jpg" alt="" width="52" height="52">
+      <span><span class="brand-name">Küçükağa Tarım</span><span class="brand-sub">Tarladan Sofraya</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <nav class="nav" id="site-nav" aria-label="Ana menü">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="urunler.html" aria-current="page">Ürünler</a>
+      <a href="hizmetler.html">Hizmetler</a>
+      <a href="neden-biz.html">Neden Biz</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="iletisim.html">İletişim</a>
+      <a class="btn btn-primary header-cta" href="https://wa.me/905422525226" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Teklif Alın</a>
+    </nav>
+  </div>
+</header>
+<main id="icerik">
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Konum"><a href="index.html">Ana Sayfa</a><span aria-hidden="true">/</span><span>Ürünler</span></nav>
+    <h1>Ürünlerimiz</h1>
+    <p>Tarladan ve seradan seçilen, dalında olgunlaşan yöresel sebze ve meyveler. Tüm ürünlerimiz toptan olarak tedarik edilir.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-3">
+      <article class="product reveal" id="salkim-domates">
+        <div class="product-img" data-full="assets/img/salkim-domates.jpg" data-caption="Salkım Domates">
+          <img src="assets/img/salkim-domates-sm.jpg" alt="Salkım Domates" width="720" height="960" loading="lazy" decoding="async">
+          <span class="tag">Sera</span>
+        </div>
+        <div class="product-body">
+          <h3>Salkım Domates</h3>
+          <div class="product-meta"><span class="chip">Dalından taze</span><span class="chip">Toptan</span></div>
+          <p>Salkımıyla birlikte, dalında tam olgunlaşarak hasat edilir. Yoğun aroması ve canlı rengiyle hem sofrada hem tezgâhta öne çıkar.</p>
+          <a class="product-link" href="https://wa.me/905422525226?text=Salkım%20Domates%20için%20fiyat%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Fiyat sorun <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="product reveal" id="verty-domates">
+        <div class="product-img" data-full="assets/img/verty-domates.jpg" data-caption="Verty Kokteyl Domates">
+          <img src="assets/img/verty-domates-sm.jpg" alt="Verty Kokteyl Domates" width="720" height="960" loading="lazy" decoding="async">
+          <span class="tag">Sera</span>
+        </div>
+        <div class="product-body">
+          <h3>Verty Kokteyl Domates</h3>
+          <div class="product-meta"><span class="chip">Dalından taze</span><span class="chip">Toptan</span></div>
+          <p>Küçük boyu ve tatlı lezzetiyle salata, kahvaltı ve sunumlar için ideal. Dalında olgunlaşır, aromasını korur.</p>
+          <a class="product-link" href="https://wa.me/905422525226?text=Verty%20Kokteyl%20Domates%20için%20fiyat%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Fiyat sorun <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="product reveal" id="kemer-patlican">
+        <div class="product-img" data-full="assets/img/kemer-patlican.jpg" data-caption="Kemer Patlıcan">
+          <img src="assets/img/kemer-patlican-sm.jpg" alt="Kemer Patlıcan" width="720" height="960" loading="lazy" decoding="async">
+          <span class="tag">Sebze</span>
+        </div>
+        <div class="product-body">
+          <h3>Kemer Patlıcan</h3>
+          <div class="product-meta"><span class="chip">Dalından taze</span><span class="chip">Toptan</span></div>
+          <p>İnce, uzun ve parlak kabuklu. Közleme, kızartma ve dolma için tercih edilen yöresel bir lezzet.</p>
+          <a class="product-link" href="https://wa.me/905422525226?text=Kemer%20Patlıcan%20için%20fiyat%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Fiyat sorun <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="product reveal" id="bif-domates">
+        <div class="product-img" data-full="assets/img/bif-domates.jpg" data-caption="Bif Domates">
+          <img src="assets/img/bif-domates-sm.jpg" alt="Bif Domates" width="720" height="960" loading="lazy" decoding="async">
+          <span class="tag">Sera</span>
+        </div>
+        <div class="product-body">
+          <h3>Bif Domates</h3>
+          <div class="product-meta"><span class="chip">Dalından taze</span><span class="chip">Toptan</span></div>
+          <p>İri ve etli yapısıyla dilimlemeye uygun; salata, sandviç ve restoran mutfakları için güçlü bir seçenek.</p>
+          <a class="product-link" href="https://wa.me/905422525226?text=Bif%20Domates%20için%20fiyat%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Fiyat sorun <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="product reveal" id="sivri-biber">
+        <div class="product-img" data-full="assets/img/sivri-biber.jpg" data-caption="Sivri Biber">
+          <img src="assets/img/sivri-biber-sm.jpg" alt="Sivri Biber" width="720" height="960" loading="lazy" decoding="async">
+          <span class="tag">Sebze</span>
+        </div>
+        <div class="product-body">
+          <h3>Sivri Biber</h3>
+          <div class="product-meta"><span class="chip">Dalından taze</span><span class="chip">Toptan</span></div>
+          <p>İnce kabuklu, taze ve diri. Kızartma, kahvaltı ve salatalar için günlük hasat.</p>
+          <a class="product-link" href="https://wa.me/905422525226?text=Sivri%20Biber%20için%20fiyat%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Fiyat sorun <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="product reveal" id="tane-domates">
+        <div class="product-img" data-full="assets/img/tane-domates.jpg" data-caption="Tane Domates">
+          <img src="assets/img/tane-domates-sm.jpg" alt="Tane Domates" width="720" height="960" loading="lazy" decoding="async">
+          <span class="tag">Sera</span>
+        </div>
+        <div class="product-body">
+          <h3>Tane Domates</h3>
+          <div class="product-meta"><span class="chip">Dalından taze</span><span class="chip">Toptan</span></div>
+          <p>Sofralık, tane tane seçilmiş domates. Günlük mutfak kullanımı ve toptan siparişler için düzenli tedarik.</p>
+          <a class="product-link" href="https://wa.me/905422525226?text=Tane%20Domates%20için%20fiyat%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener">Fiyat sorun <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Toptan sipariş</span>
+      <h2>Nasıl sipariş verilir?</h2>
+      <p>Siparişinizi üç adımda tamamlıyoruz.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="feature reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+        <h3>1. Bize yazın</h3>
+        <p>WhatsApp veya telefonla ürün, miktar ve teslimat yerini iletin.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="icon red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4Z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg></div>
+        <h3>2. Fiyat ve tarih</h3>
+        <p>Güncel fiyat ve sevkiyat tarihini size hemen bildirelim.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></div>
+        <h3>3. Sevkiyat</h3>
+        <p>Ürünleriniz kasalanıp araç filomuzla adresinize ulaştırılır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Aradığınız ürünü bulamadınız mı?</h2>
+        <p>Sezona göre ürün çeşitliliğimiz değişir. Güncel ürün listesi için bize ulaşın.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/905422525226" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>WhatsApp'tan Yazın</a>
+        <a class="btn btn-ghost" href="tel:+905422525226"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>Hemen Arayın</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-main">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo-sm.jpg" alt="" width="52" height="52" loading="lazy">
+        <span><span class="brand-name">Küçükağa Tarım</span><span class="brand-sub">Tarladan Sofraya</span></span>
+      </a>
+      <p>30 yılı aşkın tarım tecrübesiyle yaş sebze ve meyvede üretim, toptan tedarik ve sevkiyat. 2001'den beri kurumsal.</p>
+      <div class="social">
+        <a href="https://www.instagram.com/kucuk_aga_tarim.aydin?igsh=cGRrMXJ0emNpb3h1" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+        <a href="https://www.facebook.com/share/18U8bR2U88/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://wa.me/905422525226" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Sayfalar</h4>
+      <ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="urunler.html">Ürünler</a></li><li><a href="hizmetler.html">Hizmetler</a></li><li><a href="neden-biz.html">Neden Biz</a></li><li><a href="galeri.html">Galeri</a></li><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="iletisim.html">İletişim</a></li></ul>
+    </div>
+    <div>
+      <h4>Ürünler</h4>
+      <ul><li><a href="urunler.html#salkim-domates">Salkım Domates</a></li><li><a href="urunler.html#verty-domates">Verty Kokteyl Domates</a></li><li><a href="urunler.html#kemer-patlican">Kemer Patlıcan</a></li><li><a href="urunler.html#bif-domates">Bif Domates</a></li><li><a href="urunler.html#sivri-biber">Sivri Biber</a></li><li><a href="urunler.html#tane-domates">Tane Domates</a></li></ul>
+    </div>
+    <div>
+      <h4>İletişim</h4>
+      <ul class="footer-contact">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span><a href="tel:+905422525226">+90 542 252 52 26</a><br><small>Yetkili · WhatsApp</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span><a href="tel:+905425376107">+90 542 537 61 07</a><br><small>Yetkili</small></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span><a href="tel:+905527386381">+90 552 738 63 81</a><br><small>Muhasebe</small></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@kucukagatarim.com">info@kucukagatarim.com</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Acarlar Adnan Menderes Toptancı Hali No: 41-46, İncirliova / Aydın</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> Küçükağa Tarım Ürünleri. Tüm hakları saklıdır.</span>
+      <span>Küçükağa Tarım ve Çavdır Fresh tescilli markalardır.</span>
+    </div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/905422525226" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg></a>
+<script src="assets/js/site.js?v=20261117" defer></script>
 </body>
 </html>
