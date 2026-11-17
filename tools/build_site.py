@@ -45,7 +45,7 @@ NAV = [
     ("iletisim.html", "İletişim"),
 ]
 
-# (slug, ad, kategori etiketi, açıklama)  — kategori: domates / sebze / meyve
+# (slug, ad, kategori etiketi, açıklama)  — kategori: domates / sebze
 PRODUCTS = [
     ("salkim-domates", "Salkım Domates", "Domates",
      "Salkımıyla birlikte, dalında tam olgunlaşarak hasat edilir. Yoğun aroması ve canlı rengiyle hem sofrada hem tezgâhta öne çıkar."),
@@ -55,7 +55,7 @@ PRODUCTS = [
      "İri ve etli yapısıyla dilimlemeye uygun; salata, sandviç ve restoran mutfakları için güçlü bir seçenek."),
     ("tane-domates", "Tane Domates", "Domates",
      "Sofralık, tane tane seçilmiş domates. Günlük mutfak kullanımı ve toptan siparişler için düzenli tedarik."),
-    ("sivri-biber", "Sivri & Çarliston Biber", "Sebze",
+    ("carliston-biber", "Sivri & Çarliston Biber", "Sebze",
      "İnce kabuklu, taze ve diri. Kızartma, kahvaltı ve salatalar için günlük hasat."),
     ("kemer-patlican", "Kemer Patlıcan", "Sebze",
      "İnce, uzun ve parlak kabuklu. Közleme, kızartma ve dolma için tercih edilen yöresel bir lezzet."),
@@ -63,44 +63,28 @@ PRODUCTS = [
      "Çıtır ve sulu sera salatalığı; market, restoran ve toplu tüketim için kasalı tedarik."),
     ("kabak", "Kabak", "Sebze",
      "Taze ve parlak sakız kabak; özenle dizilmiş kasalarla sevk edilir."),
-    ("elma", "Elma", "Meyve",
-     "Elmalı ve Çavdır yaylalarından, sezonunda toplanan aromatik elmalar."),
-    ("armut", "Armut", "Meyve",
-     "Sulu ve aromatik sezon armutları; kasalı toptan tedarik."),
-    ("narenciye-tir", "Narenciye", "Meyve",
-     "Mandalina ve portakal başta olmak üzere sezonluk narenciye ürünleri."),
 ]
 
 # (dosya, açıklama, kategori)
 GALLERY = [
     ("salkim-domates-kasa-genis", "Kasada salkım domates", "domates"),
     ("sera-domates-dal", "Serada dalında olgunlaşan domatesler", "sera"),
-    ("palet-sevkiyat", "Sevkiyata hazır paletler", "sevkiyat"),
     ("salkim-domates-ust", "Salkım domates", "domates"),
+    ("palet-sevkiyat", "Sevkiyata hazır paletler", "sevkiyat"),
     ("sera-salkim-1", "Seradan salkım domates", "sera"),
     ("salatalik", "Salatalık", "sebze"),
-    ("narenciye-tir", "Narenciye yüklemesi", "sevkiyat"),
-    ("elma", "Elma", "meyve"),
-    ("sivri-biber-cuval", "Sivri biber", "sebze"),
-    ("armut", "Armut", "meyve"),
-    ("salkim-domates", "Salkım domates hasadı", "domates"),
+    ("cavdir-kasa", "Çavdır Fresh kasalarında domates", "sevkiyat"),
     ("kabak", "Kabak", "sebze"),
     ("sera-salkim-2", "Sera domatesi", "sera"),
-    ("salatalik-depo", "Depoda kasalanmış ürünler", "sevkiyat"),
-    ("hasat-2", "Dalında olgunlaşan domatesler", "sera"),
     ("bif-domates", "Kasada bif domates", "domates"),
     ("carliston-biber", "Taze biber", "sebze"),
-    ("cavdir-kasa", "Çavdır kasalarında sevkiyata hazır ürün", "sevkiyat"),
-    ("sera-7", "Seradan salkım domates", "sera"),
+    ("hasat-2", "Dalında olgunlaşan domatesler", "sera"),
     ("verty-domates", "Verty kokteyl domates", "domates"),
     ("kemer-patlican", "Kemer patlıcan", "sebze"),
+    ("sera-7", "Seradan salkım domates", "sera"),
     ("salkim-kasa", "Kasalanmış salkım domates", "sevkiyat"),
-    ("sera-4", "Salkım domates, sera", "sera"),
-    ("tane-domates", "Tane domates", "domates"),
-    ("hasat-1", "Hasat sonrası kasalama", "sevkiyat"),
-    ("sera-2", "Sera üretimi", "sera"),
 ]
-CATS = [("hepsi", "Tümü"), ("domates", "Domates"), ("sebze", "Sebze"), ("meyve", "Meyve"), ("sera", "Sera"), ("sevkiyat", "Depo & Sevkiyat")]
+CATS = [("hepsi", "Tümü"), ("domates", "Domates"), ("sebze", "Sebze"), ("sera", "Sera"), ("sevkiyat", "Kasa & Sevkiyat")]
 
 # ---------------------------------------------------------------- ikonlar
 def ic(path, cls=""):
@@ -238,7 +222,7 @@ def header(page):
 def footer():
     nav = "".join(f'<li><a href="{h}">{l}</a></li>' for h, l in NAV + [("neden-biz.html", "Neden Biz")])
     prods = ('<li><a href="urunler.html#domates">Domates</a></li><li><a href="urunler.html#sebze">Sebzeler</a></li>'
-             '<li><a href="urunler.html#meyve">Meyveler</a></li><li><a href="cavdir-fresh.html">Çavdır Fresh</a></li>')
+             '<li><a href="cavdir-fresh.html">Çavdır Fresh</a></li>')
     phones = "".join(f'<li>{ic(I["phone"])}<span><a href="tel:{t}">{p}</a><br><small>{n}</small></span></li>' for p, t, n in PHONES)
     return f"""</main>
 <footer class="site-footer">
@@ -385,7 +369,7 @@ def brands_section():
       <div class="brand-card reveal">
         {img("cavdir-fresh-logo", "Çavdır Fresh logosu", w=128, h=128)}
         <h3>Çavdır Fresh</h3>
-        <p>Çavdır ve Elmalı bölgesinden taze ürün markamız.</p>
+        <p>Çavdır ve Elmalı şubelerimizin taze ürün markası.</p>
       </div>
       <div class="brand-card doc reveal">
         <span data-full="{full('marka-tescil-belgesi')}" data-caption="Türk Patent marka tescil belgesi">{img("marka-tescil-belgesi", "Türk Patent marka tescil belgesi", w=490, h=720)}</span>
@@ -402,13 +386,17 @@ def brands_section():
 CATEGORIES = [
     ("domates", "Domates", "Salkım, bif, kokteyl ve tane domates", "salkim-domates-ust"),
     ("sebze", "Sebzeler", "Biber, patlıcan, salatalık ve kabak", "salatalik"),
-    ("meyve", "Meyveler", "Elma, armut ve narenciye", "elma"),
+]
+CAT_CARDS = [
+    ("domates", "Domates", "Salkım, bif, kokteyl ve tane domates", "salkim-domates-ust"),
+    ("sebze", "Biber & Patlıcan", "Sivri, çarliston biber ve kemer patlıcan", "carliston-biber"),
+    ("sebze", "Salatalık & Kabak", "Sera salatalığı ve sakız kabak", "salatalik"),
 ]
 
 
 def category_cards():
     out = []
-    for key, name, text, im in CATEGORIES:
+    for key, name, text, im in CAT_CARDS:
         out.append(f"""      <a class="cat-card reveal" href="urunler.html#{key}">
         {img(im, name, w=720, h=960)}
         <span class="cat-body"><strong>{name}</strong><span>{text}</span><em>İncele {ic(I['arrow'])}</em></span>
@@ -442,8 +430,8 @@ def fleet_section(alt=False):
     </div>
     <div class="mosaic reveal">
       <span class="m-a" data-full="{full('palet-sevkiyat')}" data-caption="Sevkiyata hazır paletler">{img("palet-sevkiyat", "Sevkiyata hazır paletler", w=720, h=960)}</span>
-      <span class="m-b" data-full="{full('narenciye-tir')}" data-caption="Araç filomuzla narenciye yüklemesi">{img("narenciye-tir", "Araç filomuzla narenciye yüklemesi", w=420, h=905)}</span>
-      <span class="m-c" data-full="{full('salatalik-depo')}" data-caption="Depoda kasalanmış ürünler">{img("salatalik-depo", "Depoda kasalanmış ürünler", w=720, h=1280)}</span>
+      <span class="m-b" data-full="{full('cavdir-kasa')}" data-caption="Çavdır Fresh kasalarında sevkiyata hazır domates">{img("cavdir-kasa", "Çavdır Fresh kasalarında sevkiyata hazır domates", w=720, h=960)}</span>
+      <span class="m-c" data-full="{full('salkim-kasa')}" data-caption="Kasalanmış salkım domates">{img("salkim-kasa", "Kasalanmış salkım domates", w=720, h=1280)}</span>
     </div>
   </div>
 </section>
@@ -454,7 +442,7 @@ def cavdir_band():
     return f"""<section class="section section-dark cavdir-band">
   <div class="wrap split reverse">
     <div class="split-media reveal">
-      {img("elma", "Çavdır Fresh elmaları", w=720, h=1280)}
+      {img("cavdir-kasa", "Çavdır Fresh kasalarında domates", w=720, h=960)}
       <div class="media-card">
         {img("cavdir-fresh-logo", "Çavdır Fresh", w=54, h=54)}
         <div><strong>Çavdır Fresh</strong><span>Tescilli markamız</span></div>
@@ -463,11 +451,11 @@ def cavdir_band():
     <div class="split-body reveal">
       <span class="eyebrow">Markamız</span>
       <h2>Çavdır Fresh</h2>
-      <p>Çavdır Fresh, Burdur Çavdır ve Antalya Elmalı yaylalarından topladığımız taze ürünleri taşıyan tescilli markamızdır. Yayla ikliminde yetişen meyve ve sebzeler, bölgedeki şubelerimizde seçilip kasalanarak Çavdır Fresh güvencesiyle yola çıkar.</p>
+      <p>Çavdır Fresh, Burdur Çavdır ve Antalya Elmalı bölgesindeki şubelerimizden sevk edilen ürünleri taşıyan tescilli markamızdır. Seçilen ürünler Çavdır Fresh kasalarında, aynı kalite anlayışıyla yola çıkar.</p>
       <ul class="checks">
         <li>{ic(I['check'])}Türk Patent tescilli marka</li>
         <li>{ic(I['check'])}Çavdır ve Elmalı şubeleri</li>
-        <li>{ic(I['check'])}Yayla ürünleri</li>
+        <li>{ic(I['check'])}Seçilmiş ürünler</li>
         <li>{ic(I['check'])}Markalı kasa ile sevkiyat</li>
       </ul>
       <a class="btn btn-primary" href="cavdir-fresh.html">Çavdır Fresh'i Tanıyın {ic(I['arrow'])}</a>
@@ -479,7 +467,7 @@ def cavdir_band():
 
 def page_index():
     p = "index.html"
-    strip_items = ["salkim-domates-ust", "palet-sevkiyat", "salatalik", "sera-salkim-1", "armut", "narenciye-tir", "kabak", "sera-7", "sivri-biber-cuval", "elma"]
+    strip_items = ["salkim-domates-ust", "palet-sevkiyat", "salatalik", "sera-salkim-1", "cavdir-kasa", "kabak", "sera-7", "carliston-biber", "bif-domates", "sera-salkim-2"]
     strip = "\n".join(
         f'      <a href="{full(n)}" data-full="{full(n)}" data-caption="{e(c)}">{img(n, c, w=360, h=360)}</a>'
         for n, c, _ in [g for g in GALLERY if g[0] in strip_items])
@@ -494,7 +482,7 @@ def page_index():
     <div class="hero-inner">
       <span class="eyebrow">2001'den beri · Aydın · Antalya · Burdur</span>
       <h1>Tecrübeyle yetişen, <em>tazelikle</em> ulaşan güven</h1>
-      <p class="lead">Küçükağa Tarım; sera üretimi, toptan meyve-sebze tedariki ve kendi araç filosuyla lojistiği tek çatı altında yürüten köklü bir tarım işletmesidir.</p>
+      <p class="lead">Küçükağa Tarım; sera üretimi, toptan domates ve sebze tedariki ve kendi araç filosuyla lojistiği tek çatı altında yürüten köklü bir tarım işletmesidir.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="hakkimizda.html">Kurumsal {ic(I['arrow'])}</a>
         <a class="btn btn-ghost" href="urunler.html">Ürünlerimiz</a>
@@ -518,7 +506,7 @@ def page_index():
   <div class="wrap">
     <div class="section-head center reveal">
       <span class="eyebrow">Ürün gruplarımız</span>
-      <h2>Domatesten narenciyeye geniş ürün yelpazesi</h2>
+      <h2>Seradan ve tarladan seçkin ürünler</h2>
       <p>Sezona göre değişen ürünlerimizi kasalı ve paletli olarak toptan tedarik ediyoruz.</p>
     </div>
     {category_cards()}
@@ -568,17 +556,17 @@ def page_index():
   </div>
 </section>
 {cta_band()}"""
-    return (head(p, "Küçükağa Tarım | Sera Üretimi, Toptan Meyve-Sebze Tedariki ve Lojistik",
-                 "Küçükağa Tarım: 2001'den beri sera üretimi, toptan domates, sebze ve meyve tedariki, kendi araç filosuyla Türkiye geneli sevkiyat. Tescilli Çavdır Fresh markası.",
+    return (head(p, "Küçükağa Tarım | Sera Üretimi, Toptan Domates-Sebze Tedariki ve Lojistik",
+                 "Küçükağa Tarım: 2001'den beri sera üretimi, toptan domates ve sebze tedariki, kendi araç filosuyla Türkiye geneli sevkiyat. Tescilli Çavdır Fresh markası.",
                  "assets/img/salkim-domates-kasa-genis.jpg")
             + header(p) + body + footer())
 
 
 def page_cavdir():
     p = "cavdir-fresh.html"
-    items = [x for x in PRODUCTS if x[0] in ("elma", "armut", "narenciye-tir")]
+    items = [x for x in PRODUCTS if x[0] in ("salkim-domates", "bif-domates", "carliston-biber")]
     body = page_hero("Çavdır Fresh",
-                     "Burdur Çavdır ve Antalya Elmalı yaylalarından, tescilli markamız güvencesiyle taze ürünler.",
+                     "Burdur Çavdır ve Antalya Elmalı şubelerimizden, tescilli markamız güvencesiyle taze ürünler.",
                      "Çavdır Fresh") + f"""<section class="section">
   <div class="wrap split">
     <div class="split-media reveal">
@@ -590,9 +578,9 @@ def page_cavdir():
     </div>
     <div class="split-body reveal">
       <span class="eyebrow">Markamız</span>
-      <h2>Yayladan gelen tazelik</h2>
+      <h2>Markalı kasada seçilmiş tazelik</h2>
       <p>Çavdır Fresh, Küçükağa Tarım'ın Türk Patent ve Marka Kurumu tescilli ikinci markasıdır. Burdur Çavdır ve Antalya Elmalı bölgesindeki şubelerimizde toplanan ürünler bu markayla seçilir, kasalanır ve sevk edilir.</p>
-      <p>Yayla iklimi; elma, armut gibi meyvelere belirgin bir aroma ve renk kazandırır. Çavdır Fresh, bu bölgenin ürünlerini aynı özen ve kalite anlayışıyla müşterilerimize ulaştırmak için kuruldu.</p>
+      <p>Çavdır Fresh kasasıyla çıkan her ürün; boy, renk ve olgunluk bakımından seçilerek kasalanır. Markalı kasa, ürünün kaynağını ve kalitesini müşterimize ilk bakışta gösterir.</p>
       <ul class="checks">
         <li>{ic(I['check'])}Türk Patent tescilli</li>
         <li>{ic(I['check'])}Çavdır Toptancı Hali şubesi</li>
@@ -606,7 +594,7 @@ def page_cavdir():
   <div class="wrap">
     <div class="section-head center reveal">
       <span class="eyebrow">Çavdır Fresh ürünleri</span>
-      <h2>Yayla meyveleri ve sezon ürünleri</h2>
+      <h2>Markamızla sunduğumuz ürünler</h2>
     </div>
     <div class="grid grid-3">
 {product_cards(items, False)}
@@ -630,7 +618,7 @@ def page_cavdir():
 </section>
 {brands_section()}{cta_band("Çavdır Fresh ürünleri için bize ulaşın", "Sezonluk ürün listesi, fiyat ve sevkiyat bilgisi için WhatsApp'tan yazabilirsiniz.")}"""
     return (head(p, "Çavdır Fresh | Küçükağa Tarım'ın Tescilli Markası",
-                 "Çavdır Fresh: Burdur Çavdır ve Antalya Elmalı yaylalarından elma, armut ve sezon ürünleri. Küçükağa Tarım'ın Türk Patent tescilli markası.",
+                 "Çavdır Fresh: Burdur Çavdır ve Antalya Elmalı şubelerinden seçilmiş domates ve sebzeler. Küçükağa Tarım'ın Türk Patent tescilli markası.",
                  "assets/img/cavdir-kasa.jpg")
             + header(p) + body + footer())
 
@@ -642,15 +630,15 @@ def page_urunler():
     ld = [{"@context": "https://schema.org", "@type": "ItemList",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": it} for i, it in enumerate(items)]}]
     body = page_hero("Ürünlerimiz",
-                     "Tarladan ve seradan seçilen, dalında olgunlaşan yöresel sebze ve meyveler. Tüm ürünlerimiz toptan olarak tedarik edilir.",
+                     "Tarladan ve seradan seçilen, dalında olgunlaşan domates ve sebzeler. Tüm ürünlerimiz toptan olarak tedarik edilir.",
                      "Ürünler") + "".join(f"""<section class="section{' section-alt' if i % 2 else ''}" id="{key}">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">{name}</span>
       <h2>{text}</h2>
     </div>
-    <div class="grid grid-{4 if key == 'sebze' else 3 if key != 'domates' else 4}">
-{product_cards([x for x in PRODUCTS if x[2] == {'domates': 'Domates', 'sebze': 'Sebze', 'meyve': 'Meyve'}[key]], False)}
+    <div class="grid grid-4">
+{product_cards([x for x in PRODUCTS if x[2] == {'domates': 'Domates', 'sebze': 'Sebze'}[key]], False)}
     </div>
   </div>
 </section>
@@ -670,8 +658,8 @@ def page_urunler():
   </div>
 </section>
 {cta_band("Aradığınız ürünü bulamadınız mı?", "Sezona göre ürün çeşitliliğimiz değişir. Güncel ürün listesi için bize ulaşın.")}"""
-    return (head(p, "Ürünlerimiz | Domates, Sebze ve Meyve Toptan Tedarik – Küçükağa Tarım",
-                 "Salkım, bif, kokteyl ve tane domates; biber, patlıcan, salatalık, kabak; elma, armut ve narenciye. Toptan, kasalı ve paletli tedarik.",
+    return (head(p, "Ürünlerimiz | Domates ve Sebze Toptan Tedarik – Küçükağa Tarım",
+                 "Salkım, bif, kokteyl ve tane domates; biber, patlıcan, salatalık ve kabak. Toptan, kasalı ve paletli tedarik.",
                  "assets/img/salkim-domates.jpg", ld)
             + header(p) + body + footer())
 
@@ -681,9 +669,9 @@ def page_hizmetler():
     services = [
         ("sera-domates-dal", "Sera Üretimi", "Modern sera sistemleri ve tarım teknolojileriyle en kaliteli ürünleri üretiyoruz. Ürünlerimiz dalında tam olgunlaşarak hasat edilir.",
          ["Kontrollü sera ortamı", "Dalında olgunlaşma", "Titiz hasat süreci"]),
-        ("salkim-domates-kasa-genis", "Toptan Meyve & Sebze Tedariki", "Tarladan doğrudan toptan fiyatlarla kaliteli sebze ve meyve tedarik ediyoruz. Doğrudan çiftçiden alım yaparak en uygun fiyatı sunuyoruz.",
+        ("salkim-domates-kasa-genis", "Toptan Domates & Sebze Tedariki", "Tarladan doğrudan toptan fiyatlarla kaliteli domates ve sebze tedarik ediyoruz. Doğrudan çiftçiden alım yaparak en uygun fiyatı sunuyoruz.",
          ["Doğrudan çiftçiden alım", "Toptan fiyatlandırma", "Geniş ürün çeşitliliği"]),
-        ("salatalik-depo", "Depolama & Kalite Kontrol", "Her adımda kaliteyi kontrol ediyor, modern soğuk hava depolama sistemleriyle ürünlerin tazeliğini koruyoruz.",
+        ("cavdir-kasa", "Depolama & Kalite Kontrol", "Her adımda kaliteyi kontrol ediyor, modern soğuk hava depolama sistemleriyle ürünlerin tazeliğini koruyoruz.",
          ["Soğuk hava depolama", "Kalite kontrol", "Uygun ambalajlama"]),
         ("palet-sevkiyat", "Lojistik & Araç Filosu", "Kendi araç filomuz ve deneyimli şoför kadromuzla ürünleri paletli ve kasalı olarak yüklüyor, Türkiye'nin dört bir yanına güvenli ve zamanında ulaştırıyoruz.",
          ["Kendi araç filosu", "Paletli ve kasalı yükleme", "Zamanında teslimat", "Türkiye geneli dağıtım"]),
@@ -709,7 +697,7 @@ def page_hizmetler():
 </section>
 {fleet_section(True)}{cta_band("Firmanız için düzenli tedarik mi arıyorsunuz?", "Hal, market, restoran ve toptancılar için düzenli ürün tedariki sağlıyoruz.")}"""
     return (head(p, "Lojistik & Hizmetler | Araç Filosu, Toptan Tedarik, Sera Üretimi – Küçükağa Tarım",
-                 "Sera üretimi, toptan meyve ve sebze tedariki, soğuk hava depolama ve Türkiye geneli sevkiyat hizmetleri.",
+                 "Sera üretimi, toptan domates ve sebze tedariki, soğuk hava depolama ve Türkiye geneli sevkiyat hizmetleri.",
                  "assets/img/sera-2.jpg")
             + header(p) + body + footer())
 
